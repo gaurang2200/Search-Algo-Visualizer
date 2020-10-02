@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="lottie-player.js"></script>
+
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <div id="mainDiv">
+      <header><h1>Searching Algorithm Visualizer</h1></header>
+        <div>
+          <p>This is a Project which allows you to visualize how various searching Algorithms work.</p>
+          <p>Its main purpose is to make the user understand how these Algorithms approch a given element.</p>
+
+          Enter the numbers you want <b>OR</b> leave blank for Random values <i>(Input should be Space Seperated Integers with preferable range of 0 to 100 - For Better Visualization)</i>
+        </div>
+        <div>
+        <ul>
+        <li>For Depth First Search, the Graph is automatically created with the given input (or Randomely), i.e, the Edges are automatically created.</li>
+        <li>For Hash Map, the values which are smaller than 100 are considered.</li>
+        </ul>
+          
+        Enter Elements:&nbsp;
+        <input id="arrayInput">
+        <br>
+        Enter Element you want to Search:&nbsp; <input id="findNum">
+        </div>
+        <div>
+          <ol>
+          Select the Searching Algorithm you want to Visualize -
+            <li onclick="tempChoice = 1">Linear Search</li>
+            <li onclick="tempChoice = 2">Binary Search</li>
+            <li onclick="tempChoice = 3">Binary Search Tree</li>
+            <li onclick="tempChoice = 4">Depth First Search</li>
+            <li onclick="tempChoice = 5">Hash Map</li>
+          </ol>
+          <button id="search" onclick="setChoice()">Start Searching</button>
+        </div>
+
+          <script src="index.js"></script>
+          <script src="sketch.js"></script>
+          <script src="Tree.js"></script>
+          <script src="./Algorithms/Depth_First_Search.js"></script>
+          <script src="./Algorithms/Binary_Search_Tree.js"></script>
+          <script src="./Algorithms/Linear_Search.js"></script>
+          <script src="./Algorithms/Binary_Search.js"></script>
+          <script src="./Algorithms/Hash_Map.js"></script>
+
+        <div id="footer">Made By: <span>Gaurang Gupta</span></div>
+    </div>
+</body></html>

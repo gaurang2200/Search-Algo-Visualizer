@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url('./bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #DDD;
+  font-family: 'Baloo Tamma 2', cursive;
+/*   font-size: 1.8em; */
+}
+
+body header{
+  padding: 0.1em 0;
+    border-radius: 20px 20px;
+  box-shadow: -1px 8px 10px #555555;
+  text-align: center;
+    color: #3961ce;
+}
+
+#mainDiv {
+    display: grid | inline-grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 70%;
+    box-shadow: -5px 10px 20px 10px #111;
+    background: #222A;
+}
+
+#mainDiv div input{
+    color: #EEE;
+    background: #0005;
+    padding: 0.1em 0.5em;
+    border-radius: 5px 5px;
+    border-style: none;
+    box-shadow: -1px -1px 4px #FFF;
+    margin: 0em 1em;
+    resize: horizontal;
+}
+
+#mainDiv ol{
+  background: #001628;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  color: #25C0D1;
+}
+
+#mainDiv ol li{
+    margin: 0.2em 0 0 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#mainDiv ol li:hover{
+  font-weight: bold;
+  color: #004384;
+}
+
+button{
+  margin: 0em 1em;
+  font-family: 'Baloo Tamma 2', cursive;
+  cursor: pointer;
+  background: #2FEB89;
+  border: none;
+  border-radius: 1cm;
+  text-align: center;
+  font-weight: bold;
+  color: #F8F7FF;
+  padding: 0.3cm 0.7cm;
+  box-shadow: 0px 5px 10px #555555;
+  transition: ease-in-out 0.3s;
+}
+
+button:hover{
+  background: #2FEB89;
+  color: #FF4747;
+}
+
+#footer span{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto 2em auto;
+  box-shadow: -5px 10px 20px #000;
+}
