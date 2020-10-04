@@ -76,7 +76,7 @@ function BSTSearchAnimation(x, y){
 function Heading(heading){
   textFont("Consolas");
   textAlign(CENTER);
-  textSize(height/15);
+  textSize(min(height/15, width/15));
   fill(183, 30, 60);
   text(heading, width/2, height/15);
 }
@@ -85,7 +85,7 @@ function TimeComplexityBST(){
   let head = "Time Complexity: O(log(n))";
   textFont("Consolas");
   textAlign(CENTER);
-  textSize(height/25);
+  textSize(min(height/25, width/25));
   fill(13, 130, 180);
   text(head, width/2, height/9);
   
@@ -99,6 +99,6 @@ function NumberToFindBST(){
 
 function printMessageBST(message){
   fill(230, 180, 10);
-  textSize(height/25);
+  textSize(min(height/25, width/25));
   text(message, width/2, height - 20)
 }
