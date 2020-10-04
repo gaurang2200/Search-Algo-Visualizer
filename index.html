@@ -39,8 +39,18 @@
             <li onclick="tempChoice = 4">Depth First Search</li>
             <li onclick="tempChoice = 5">Hash Map</li>
           </ol>
-          <button id="search" onclick="setChoice()">Start Searching</button>
         </div>
+        
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times;</a>
+            <div id = "canvasId">
+            </div>
+            <div id="random">
+                <button onclick="setChoice(); getRandom()">Random Input</button>
+            </div>
+        </div>
+        
+        <button onclick="setChoice(); openNav();">Start Searching</button>
 
           <script src="index.js"></script>
           <script src="sketch.js"></script>
@@ -51,6 +61,6 @@
           <script src="./Algorithms/Binary_Search.js"></script>
           <script src="./Algorithms/Hash_Map.js"></script>
 
-        <div id="footer">Made By: <span>Gaurang Gupta</span></div>
+        <div id="footer" >Made By: <span>Gaurang Gupta</span></div>
     </div>
 </body></html>
