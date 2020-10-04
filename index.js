@@ -1,3 +1,16 @@
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+function getRandom(){
+    document.getElementById("findNum").value = "";
+    document.getElementById("arrayInput").value = "";
+}
+
 function setChoice(){
   findNum = document.getElementById("findNum").value || floor(random(1, 100));
   A = int(document.getElementById("arrayInput").value.split(' '));
@@ -16,8 +29,4 @@ function sorted(){
     if(A[i] > A[i+1])
       return false;
   return true;
-}
-
-function onLinkClick() {
-  document.getElementById("CanvasID").scrollIntoView();
 }
