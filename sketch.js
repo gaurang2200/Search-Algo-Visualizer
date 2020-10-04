@@ -7,10 +7,11 @@ let findNum = 49;
 
 function setup() { 
   var canvas = createCanvas(500, 500);
-  canvas.parent("mainDiv");
+  canvas.parent("canvasId");
 }
 
 function draw() {
+  resizeCanvas(7*windowWidth/10, 8*windowHeight/10);
   background(60);
   
   switch(choice){
