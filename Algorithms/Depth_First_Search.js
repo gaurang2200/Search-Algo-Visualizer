@@ -83,7 +83,7 @@ function VertexAnimation(){
 
 function CreatingVertices(){
   let n = A.length;
-  let r = width/2 - height/5;
+  let r = min(width/3, height/3);
   let theta = -(PI/2);
   let temp;
   
