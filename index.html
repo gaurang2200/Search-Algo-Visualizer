@@ -3,7 +3,8 @@
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="p5.sound.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="lottie-player.js"></script>
 
@@ -11,34 +12,58 @@
 
   </head>
   <body>
-    <div id="mainDiv">
-      <header><h1>Searching Algorithm Visualizer</h1></header>
-        <div>
-          <p>This is a Project which allows you to visualize how various searching Algorithms work.</p>
-          <p>Its main purpose is to make the user understand how these Algorithms approch a given element.</p>
+    <nav class="navbar navbar-expand-lg  fixed-top"><a href="#" class="navbar-brand"><h2>Sorting Algorithm Visualizer</h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://github.com/gaurang2200/Search-Algo-Visualizer">Gaurang Gupta</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
+    <section class="container section-gap  ">
+      <div class="row jumbotron mb-5">
+          <div class="col-lg-8">
+            <h1 >Searching Techniques</h1>
+            <p>Searching Algorithms are designed to check for an element or retrieve an element from any data structure where it is stored. Based on the type of search operation, these algorithms are generally classified into two categories:
+              <ol>
+                <li><strong>Sequential Search</strong>: In this, the list or array is traversed sequentially and every element is checked. <em>Eg: Linear Search.</em></li>
+                <li><strong>Interval Search</strong>: These algorithms are specifically designed for searching in sorted data-structures. These type of searching algorithms are much more efficient than Linear Search as they repeatedly target the center of the search structure and divide the search space in half. <em>Ex: Binary Search.</em></p></li>
+              </ol>
+            <p>This is a Project which allows you to visualize how various searching Algorithms work.
+            Its main purpose is to make the user understand how these Algorithms approch a given element.</p>
+            <p>Made by: <em>Gaurang Gupta</em></p>
+            </div>
+            <div class="col-lg-4">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_w51pcehl.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop  autoplay></lottie-player>
+            </div>
+      </div>
+
+      <div class="row jumbotron">
+        <h3>Input</h3>
+        <div>
           Enter the numbers you want <b>OR</b> leave blank for Random values <i>(Input should be Space Seperated Integers with preferable range of 0 to 100 - For Better Visualization)</i>
         </div>
         <div>
-        <ul>
-        <li>For Depth First Search, the Graph is automatically created with the given input (or Randomely), i.e, the Edges are automatically created.</li>
-        <li>For Hash Map, the values which are smaller than 100 are considered.</li>
-        </ul>
-          
-        Enter Elements:&nbsp;
-        <input id="arrayInput">
-        <br>
-        Enter Element you want to Search:&nbsp; <input id="findNum">
-        </div>
-        <div>
-          <ol>
-          Select the Searching Algorithm you want to Visualize -
-            <li onclick="tempChoice = 1">Linear Search</li>
-            <li onclick="tempChoice = 2">Binary Search</li>
-            <li onclick="tempChoice = 3">Binary Search Tree</li>
-            <li onclick="tempChoice = 4">Depth First Search</li>
-            <li onclick="tempChoice = 5">Hash Map</li>
-          </ol>
+          <ul>
+            <li>For Depth First Search, the Graph is automatically created with the given input (or Randomely), i.e, the Edges are automatically created.</li>
+            <li>For Hash Map, the values which are smaller than 100 are considered.</li>
+          </ul>
+            
+          <div class="form-group">
+            <label for="exampleInputEmail1">Enter Elements</label>
+            <input type="text" class="form-control" id="arrayInput" aria-describedby="emailHelp" placeholder="Input Elements">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Element you want to Search</label>
+            <input type="text" class="form-control" id="findNum" placeholder="Find Element">
+          </div>
         </div>
         
         <div id="myNav" class="overlay">
@@ -46,11 +71,9 @@
             <div id = "canvasId">
             </div>
             <div id="random">
-                <button onclick="setChoice(); getRandom()">Random Input</button>
+                <button class="btn btn-info" onclick="setChoice(); getRandom()">Random Input</button>
             </div>
         </div>
-        
-        <button onclick="setChoice(); openNav();">Start Searching</button>
 
           <script src="index.js"></script>
           <script src="sketch.js"></script>
@@ -60,7 +83,60 @@
           <script src="./Algorithms/Linear_Search.js"></script>
           <script src="./Algorithms/Binary_Search.js"></script>
           <script src="./Algorithms/Hash_Map.js"></script>
+      </div>
 
-        <div id="footer" >Made By: <span>Gaurang Gupta</span></div>
-    </div>
+      <div class="row">
+          <div class="col-lg-4">
+            <div class="card text-white bg-dark">
+              <h4 class="card-header">Linear Search</h4>
+              <div class="card-body">
+                <p class="card-title">Linear Search sequentially checks each element of the list until a match is found or the whole list has been searched.</p>
+                <button onclick="tempChoice = 1" class="useThis btn btn-info ">Use this</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-white bg-dark ">
+              <h4 class="card-header">Binary Search</h4>
+              <div class="card-body">
+                <p class="card-title">In a sorted array, binary search compares the target value to the middle element of the array.</p>
+                <button onclick="tempChoice = 2" class="btn btn-info useThis">Use this</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card text-white bg-dark ">
+              <h4 class="card-header">Depth First Search</h4>
+              <div class="card-body">
+                <p class="card-title">DFS starts at the root node and explores as far as possible along each branch before backtracking.</p>
+                <button onclick="tempChoice = 4" class="btn btn-info useThis">Use this</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark ">
+              
+              <h4 class="card-header">Binary Search Tree</h4>
+              <div class="card-body">
+                <p class="card-title">BST is a data structure whose nodes each store a key greater than all the keys in the node's left subtree and less than those in its right subtree.</p>
+                <button onclick="tempChoice = 3" class="btn btn-info useThis">Use this</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-3">
+            <div class="card text-white bg-dark ">
+              <h4 class="card-header">Hash Map</h4>
+              <div class="card-body">
+                <p class="card-title">Hash map uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.</p>
+                <button onclick="tempChoice = 5" class="btn btn-info useThis">Use this</button>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <button class="btn btn-info" id="search" onclick="setChoice();">Start Searching</button>
+    </section>
+    
 </body></html>

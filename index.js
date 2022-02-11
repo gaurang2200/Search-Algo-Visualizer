@@ -12,11 +12,17 @@ function getRandom(){
 }
 
 function setChoice(){
-  findNum = document.getElementById("findNum").value || floor(random(1, 100));
-  A = int(document.getElementById("arrayInput").value.split(' '));
-  if(A.length <= 1)  getRandomArray();
-  counter = 1;
-  choice = tempChoice;
+  try {
+    choice = tempChoice;
+    findNum = document.getElementById("findNum").value || floor(random(1, 100));
+    A = int(document.getElementById("arrayInput").value.split(' '));
+    if(A.length <= 1)  getRandomArray();
+    counter = 1;
+
+    openNav();
+  } catch(err){
+    alert("Select an Algorithm First");
+  }
 }
 
 function getRandomArray(){
